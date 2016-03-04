@@ -7,10 +7,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/blue"
     tools:context="com.wenzin.helena.iamhere.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Checka in var du är:"
+        android:id="@+id/checkInTextView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hemma"
+        android:id="@+id/homeButton"
+        android:layout_below="@+id/checkInTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="59dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skolan"
+        android:id="@+id/schoolButton"
+        android:layout_alignTop="@+id/homeButton"
+        android:layout_toRightOf="@+id/homeButton"
+        android:layout_toEndOf="@+id/homeButton"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp" />
 </RelativeLayout>
