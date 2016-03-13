@@ -13,29 +13,37 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Checka in var du är:"
-        android:id="@+id/checkInTextView" />
+        android:text="Var är du?"
+        android:id="@+id/checkInTextView"
+        android:textSize="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/homeButton"
+        android:layout_alignStart="@+id/homeButton" />
+        android:textView.setTextSize(18)
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hemma"
         android:id="@+id/homeButton"
+        android:layout_marginLeft="99dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="45dp"
         android:layout_below="@+id/checkInTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="59dp" />
+        android:textSize="25dp"
+        android:onClick="sendMailHomeButton"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skolan"
         android:id="@+id/schoolButton"
-        android:layout_alignTop="@+id/homeButton"
-        android:layout_toRightOf="@+id/homeButton"
-        android:layout_toEndOf="@+id/homeButton"
-        android:layout_marginLeft="55dp"
-        android:layout_marginStart="55dp" />
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/homeButton"
+        android:layout_alignLeft="@+id/homeButton"
+        android:layout_alignStart="@+id/homeButton"
+        android:textSize="25dp"
+        android:onClick="sendMailSchoolButton"/>
 </RelativeLayout>
