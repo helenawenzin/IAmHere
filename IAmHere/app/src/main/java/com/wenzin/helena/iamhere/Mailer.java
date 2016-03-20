@@ -1,7 +1,6 @@
 package com.wenzin.helena.iamhere;
 
 import android.os.AsyncTask;
-
 import com.sendgrid.*;
 
 import java.util.Hashtable;
