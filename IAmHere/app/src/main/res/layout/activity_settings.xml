@@ -9,4 +9,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.wenzin.helena.iamhere.SettingsActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spara"
+        android:id="@+id/saveButton"
+        android:layout_marginTop="46dp"
+
+        android:onClick="saveSettings"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_below="@+id/checkInTextView"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

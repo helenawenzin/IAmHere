@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId())
         {
             case R.id.menu_settings:
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
                 break;
         }
         return true;
