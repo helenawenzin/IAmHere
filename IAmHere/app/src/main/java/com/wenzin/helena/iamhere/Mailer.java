@@ -32,7 +32,6 @@ public class Mailer {
 
         @Override
         protected String doInBackground(Hashtable<String,String>... params) {
-            //TODO: Use params instead of hardcoded values in email
             Hashtable<String,String> h = params[0];
             SendGrid sendgrid = new SendGrid("");
 
@@ -49,7 +48,7 @@ public class Mailer {
             } catch (SendGridException e) {
                 e.printStackTrace();
             }
-
+            System.out.println("Status=" + response.getStatus() + " Message: " + response.getMessage());
             return response.toString();
         }
     }
