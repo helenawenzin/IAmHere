@@ -11,9 +11,13 @@ import java.util.concurrent.ExecutionException;
  */
 public class Mailer {
 
-    public void sendMail() {
+    SettingsFromUser settingsFromUser = new SettingsFromUser();
+
+    public void sendMail(String subject, String body) {
         String result = "";
         Hashtable<String,String> params = new Hashtable<String,String>();
+        params.put("subject", subject);
+        params.put("body", body);
         // Send the Email
         SendEmailWithSendGrid sendEmailWithSendGrid = new SendEmailWithSendGrid();
         try {
@@ -32,15 +36,14 @@ public class Mailer {
 
         @Override
         protected String doInBackground(Hashtable<String,String>... params) {
-            Hashtable<String,String> h = params[0];
             SendGrid sendgrid = new SendGrid("");
 
             SendGrid.Email email = new SendGrid.Email();
 
-            email.addTo("helena.wenzin@gmail.com");
-            email.setFrom("helena.wenzin@gmail.com");
-            email.setSubject("Simon är nu hemma!");
-            email.setHtml("Hej! Nu har jag kommit hem! //Simon");
+            email.addTo(settingsFromUser.getTo());
+            email.setFrom(settingsFromUser.getFrom());
+            email.setSubject(params[0].get("subject"));
+            email.setHtml(params[0].get("body"));
 
             SendGrid.Response response = null;
             try {
