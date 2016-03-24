@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMailHomeButton(View view) {
-        mailer.sendMail();
+        mailer.sendMail("Hemma!", "Hej! Nu har jag kommit hem!");
 
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         String message = "Mail skickat"; //TODO: Put in xml file
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMailSchoolButton(View view) {
-        System.out.println("Jag skickar mail... Skolan!");
+        mailer.sendMail("I skolan!", "Hej! Nu är jag i skolan!");
 
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         String message = "Mail skickat"; //TODO: Put in xml file
