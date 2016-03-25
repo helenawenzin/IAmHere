@@ -41,16 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMailHomeButton(View view) {
         mailer.sendMail("Hemma!", "Hej! Nu har jag kommit hem!");
-
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        String message = "Mail skickat"; //TODO: Put in xml file
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+        startDisplayMessageMailSent();
     }
 
     public void sendMailSchoolButton(View view) {
         mailer.sendMail("I skolan!", "Hej! Nu är jag i skolan!");
+        startDisplayMessageMailSent();
+    }
 
+    private void startDisplayMessageMailSent() {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         String message = "Mail skickat"; //TODO: Put in xml file
         intent.putExtra(EXTRA_MESSAGE, message);
