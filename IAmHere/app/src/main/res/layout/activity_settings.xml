@@ -7,14 +7,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.wenzin.helena.iamhere.SettingsActivity">
+    tools:context="com.wenzin.helena.iamhere.SettingsActivity"
+    >
+
+    <EditText android:id="@+id/save_Email_Send_To"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/save_Email_Send_To"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/save_Email_Send_From"
+        android:layout_alignStart="@+id/save_Email_Send_From"
+        android:layout_marginTop="84dp" />
+
+    <EditText android:id="@+id/save_Email_Send_From"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/save_Email_Send_From"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/save_Email_Send_To"
+        android:layout_alignLeft="@+id/saveButton"
+        android:layout_alignStart="@+id/saveButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spara"
         android:id="@+id/saveButton"
-        android:layout_marginTop="46dp"
 
         android:onClick="saveSettings"
         android:textColor="#FFFFFF"
@@ -25,7 +45,8 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:layout_below="@+id/checkInTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp" />
 
 </RelativeLayout>

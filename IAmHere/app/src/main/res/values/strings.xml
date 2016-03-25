@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IAmHere</string>
+    <string name="save_Email_Send_To">Mail ska skickas till</string>
+    <string name="save_Email_Send_From">Mail ska skickas från</string>
 </resources>
