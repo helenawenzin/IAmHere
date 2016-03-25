@@ -1,5 +1,6 @@
 package com.wenzin.helena.iamhere;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import com.sendgrid.*;
 
@@ -11,7 +12,11 @@ import java.util.concurrent.ExecutionException;
  */
 public class Mailer {
 
-    SettingsFromUser settingsFromUser = new SettingsFromUser();
+    private SharedPreferences pref;
+
+    public Mailer(SharedPreferences pref) {
+        this.pref = pref;
+    }
 
     public void sendMail(String subject, String body) {
         String result = "";
@@ -40,8 +45,8 @@ public class Mailer {
 
             SendGrid.Email email = new SendGrid.Email();
 
-            email.addTo(settingsFromUser.getTo());
-            email.setFrom(settingsFromUser.getFrom());
+            email.addTo(pref.getString("sendTo", ""));
+            email.setFrom(pref.getString("sendFrom", ""));
             email.setSubject(params[0].get("subject"));
             email.setHtml(params[0].get("body"));
 
