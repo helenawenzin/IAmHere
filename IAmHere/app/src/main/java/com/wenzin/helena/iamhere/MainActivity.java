@@ -1,6 +1,7 @@
 package com.wenzin.helena.iamhere;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,12 +13,15 @@ public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.wenzin.helena.iamhere.MESSAGE";
 
-    Mailer mailer = new Mailer();
+    private SharedPreferences pref;
+    private Mailer mailer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        pref = getApplicationContext().getSharedPreferences(SettingsActivity.MY_PREFS_NAME, MODE_PRIVATE);
+        mailer = new Mailer(pref);
     }
 
     @Override
