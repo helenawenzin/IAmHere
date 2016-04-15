@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.wenzin.helena.iamhere">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -20,9 +22,11 @@
         <activity android:name=".DisplayMessageActivity" />
         <activity android:name=".SettingsActivity"/>
 
+        <!--
         <service
             android:name=".FetchAddressIntentService"
             android:exported="false"/>
+        -->
     </application>
 
     <meta-data
