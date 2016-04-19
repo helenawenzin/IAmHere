@@ -94,8 +94,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
 
     private void startDisplayMessageMailSent() {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        String message = "Mail skickat"; //TODO: Put in xml file
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(EXTRA_MESSAGE, getString(R.string.messageMailSent));
         startActivity(intent);
     }
 
