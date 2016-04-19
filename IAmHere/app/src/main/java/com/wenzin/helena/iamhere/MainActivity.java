@@ -83,12 +83,15 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     }
 
     public void sendMailHomeButton(View view) {
-        mailer.sendMail("Hemma!", "Hej! Nu har jag kommit hem!");
-        startDisplayMessageMailSent();
+        sendMailWithTextAndDisplayMessageMailSent("Hemma!", "Hej! Nu har jag kommit hem!");
     }
 
     public void sendMailSchoolButton(View view) {
-        mailer.sendMail("I skolan!", "Hej! Nu är jag i skolan!");
+        sendMailWithTextAndDisplayMessageMailSent("I skolan!", "Hej! Nu är jag i skolan!");
+    }
+
+    public void sendMailWithTextAndDisplayMessageMailSent(String subject, String body) {
+        mailer.sendMail(subject, body);
         startDisplayMessageMailSent();
     }
 
