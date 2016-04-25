@@ -83,17 +83,22 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     }
 
     public void sendMailHomeButton(View view) {
-        String bodyHome = "Hej! Nu har jag kommit hem!";
+        String bodyHome = "Hej! Nu har jag kommit hem!"; //TODO:xml-file
         sendMailWithTextAndDisplayMessageMailSent("Hemma!", bodyHome);
     }
 
     public void sendMailSchoolButton(View view) {
-        String bodySchool = "Hej! Nu är jag i skolan!";
+        String bodySchool = "Hej! Nu är jag i skolan!"; //TODO:xml-file
         sendMailWithTextAndDisplayMessageMailSent("I skolan!", bodySchool);
     }
 
+    public void sendMailIAMHereButton(View view) {
+        String bodyIAmHere = "Hej! Nu är jag här!"; //TODO:xml-file
+        sendMailWithTextAndDisplayMessageMailSent("Här är jag!", bodyIAmHere);
+    }
+
     public void sendMailWithTextAndDisplayMessageMailSent(String subject, String body) {
-        String bodyWithLinkToMap = body + " och på kartan är jag: " + "http://www.google.com/maps/place/" +
+        String bodyWithLinkToMap = body + "<p/>" + " och på kartan är jag: " + "http://www.google.com/maps/place/" +
                 mLastLocation.getLatitude() +"," + mLastLocation.getLongitude();
         mailer.sendMail(subject, bodyWithLinkToMap);
         startDisplayMessageMailSent();
