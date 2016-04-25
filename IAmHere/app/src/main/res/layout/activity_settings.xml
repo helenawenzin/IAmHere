@@ -8,6 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.wenzin.helena.iamhere.SettingsActivity"
+    android:background="@color/lightgreen"
     >
 
     <EditText android:id="@+id/save_Email_Send_To"
@@ -17,18 +18,19 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/save_Email_Send_From"
         android:layout_alignStart="@+id/save_Email_Send_From"
-        android:layout_marginTop="84dp" />
+        android:layout_marginTop="84dp"
+        android:inputType="textEmailAddress"/>
 
     <EditText android:id="@+id/save_Email_Send_From"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/save_Email_Send_From"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/save_Email_Send_To"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_below="@+id/mailFromText"
         android:layout_alignLeft="@+id/saveButton"
-        android:layout_alignStart="@+id/saveButton" />
+        android:layout_alignStart="@+id/saveButton"
+        android:inputType="textEmailAddress"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -48,5 +50,27 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mail skickas till:"
+        android:id="@+id/mailToText"
+        android:layout_alignBottom="@+id/save_Email_Send_To"
+        android:layout_alignLeft="@+id/save_Email_Send_To"
+        android:layout_alignStart="@+id/save_Email_Send_To"
+        android:layout_marginBottom="41dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mail skickas från:"
+        android:id="@+id/mailFromText"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/save_Email_Send_To"
+        android:layout_alignLeft="@+id/save_Email_Send_From"
+        android:layout_alignStart="@+id/save_Email_Send_From" />
 
 </RelativeLayout>

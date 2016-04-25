@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">IAmHere</string>
-    <string name="save_Email_Send_To">Mail ska skickas till</string>
-    <string name="save_Email_Send_From">Mail ska skickas från</string>
+    <string name="save_Email_Send_To">Fyll i mail</string>
+    <string name="save_Email_Send_From">Fyll i mail</string>
     <string name="no_address_found">no_address_found</string>
     <string name="service_not_available">service_not_available</string>
     <string name="invalid_lat_long_used">invalid_lat_long_used</string>
