@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
 
         if (pref.getString("sendTo", "").equals("")) {
             Context context = getApplicationContext();
-            CharSequence text = "Glöm inte fylla i settings!!";
+            CharSequence text = "Glöm inte fylla i inställningar!!";
             int duration = Toast.LENGTH_LONG;
 
             Toast toast = Toast.makeText(context, text, duration);

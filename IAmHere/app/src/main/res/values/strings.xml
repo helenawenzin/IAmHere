@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">IAmHere</string>
-    <string name="save_Email_Send_To">Fyll i mail</string>
-    <string name="save_Email_Send_From">Fyll i mail</string>
+    <string name="save_Email_Send_To">Type in mail</string>
+    <string name="save_Email_Send_From">Type in mail</string>
     <string name="no_address_found">no_address_found</string>
     <string name="service_not_available">service_not_available</string>
     <string name="invalid_lat_long_used">invalid_lat_long_used</string>
     <string name="address_found">address_found</string>
-    <string name="messageMailSent">Mail skickat</string>
+    <string name="messageMailSent">Mail sent</string>
+    <string name="question_on_top">Where are you?</string>
 </resources>

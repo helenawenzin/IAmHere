@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.wenzin.helena.iamhere.SettingsActivity"
-    android:background="@color/lightgreen"
+    android:background="@color/grey"
     >
 
     <EditText android:id="@+id/save_Email_Send_To"

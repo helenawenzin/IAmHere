@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">IAmHere</string>
+<string name="save_Email_Send_To">Fyll i mail</string>
+<string name="save_Email_Send_From">Fyll i mail</string>
+<string name="no_address_found">ingen_adress_hittad</string>
+<string name="service_not_available">service_inte_tillgänglig</string>
+<string name="invalid_lat_long_used">ej_giltig_lat_long</string>
+<string name="address_found">adress_hittad</string>
+<string name="messageMailSent">Mail skickat</string>
+    <string name="question_on_top">Var är du?</string>
+</resources>
