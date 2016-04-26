@@ -7,5 +7,6 @@
     <string name="invalid_lat_long_used">invalid_lat_long_used</string>
     <string name="address_found">address_found</string>
     <string name="messageMailSent">Mail sent</string>
-    <string name="question_on_top">Where are you?</string>
+    <string name="question_on_top">WHERE ARE YOU?</string>
+    <string name="menySettings">Settings</string>
 </resources>

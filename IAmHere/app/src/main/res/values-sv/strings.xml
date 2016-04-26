@@ -8,5 +8,6 @@
 <string name="invalid_lat_long_used">ej_giltig_lat_long</string>
 <string name="address_found">adress_hittad</string>
 <string name="messageMailSent">Mail skickat</string>
-    <string name="question_on_top">Var är du?</string>
+    <string name="question_on_top">VAR ÄR DU?</string>
+    <string name="menySettings">Inställningar</string>
 </resources>
