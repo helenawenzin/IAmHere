@@ -9,4 +9,5 @@
     <string name="messageMailSent">Mail sent</string>
     <string name="question_on_top">WHERE ARE YOU?</string>
     <string name="menySettings">Settings</string>
+    <string name="seetingsMessage">Settings are saved</string>
 </resources>

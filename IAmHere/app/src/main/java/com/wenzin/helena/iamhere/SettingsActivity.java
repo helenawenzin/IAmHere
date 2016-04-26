@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
         editor.apply();
 
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        String message = "Settings är sparade";
+        String message = getString(R.string.seetingsMessage);
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
