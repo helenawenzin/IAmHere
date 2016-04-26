@@ -94,17 +94,15 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     }
 
     public void sendMailHomeButton(View view) {
-        String bodyHome = "Hej! Nu har jag kommit hem!"; //TODO:xml-file
-        sendMailWithTextAndDisplayMessageMailSent("Hemma!", bodyHome);
+        sendMailWithTextAndDisplayMessageMailSent("Hemma!", getString(R.string.bodyHome));
     }
 
     public void sendMailSchoolButton(View view) {
-        String bodySchool = "Hej! Nu är jag i skolan!"; //TODO:xml-file
-        sendMailWithTextAndDisplayMessageMailSent("I skolan!", bodySchool);
+        sendMailWithTextAndDisplayMessageMailSent("I skolan!", getString(R.string.bodySchool));
     }
 
     public void sendMailIAMHereButton(View view) {
-        String bodyIAmHere = "Hej! Nu är jag här!"; //TODO:xml-file
+        String bodyIAmHere = getString(R.string.bodyIAmHere); //TODO:xml-file
         sendMailWithTextAndDisplayMessageMailSent("Här är jag!", bodyIAmHere);
     }
 
