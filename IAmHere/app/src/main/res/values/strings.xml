@@ -9,7 +9,7 @@
     <string name="messageMailSent">Mail sent</string>
     <string name="question_on_top">WHERE ARE YOU?</string>
     <string name="menySettings">Settings</string>
-    <string name="seetingsMessage">Settings are saved</string>
+    <string name="settingsSaveMessage">Settings are saved</string>
     <string name="bodyHome">Hi! I am now at Home!</string>
     <string name="bodySchool">Hi! I am now in School!</string>
     <string name="bodyIAmHere">Hi! Iam now Here!</string>

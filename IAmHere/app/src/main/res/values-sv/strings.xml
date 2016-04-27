@@ -10,7 +10,7 @@
 <string name="messageMailSent">Mail skickat</string>
     <string name="question_on_top">VAR ÄR DU?</string>
     <string name="menySettings">Inställningar</string>
-    <string name="seetingsMessage">Inställningarna är sparade</string>
+    <string name="settingsSaveMessage">Inställningarna är sparade</string>
     <string name="bodyHome">Hej! Nu är jag Hemma!</string>
     <string name="bodySchool">Hej! Nu är jag i Skolan!</string>
     <string name="bodyIAmHere">Hej! Nu är jag Här!</string>
