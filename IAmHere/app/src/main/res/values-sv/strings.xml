@@ -14,4 +14,9 @@
     <string name="bodyHome">Hej! Nu är jag Hemma!</string>
     <string name="bodySchool">Hej! Nu är jag i Skolan!</string>
     <string name="bodyIAmHere">Hej! Nu är jag Här!</string>
+    <string name="subjectHome">Hemma!</string>
+    <string name="subjectSchool">I skolan!</string>
+    <string name="subjectIAmHere">Här är jag!</string>
+    <string name="bodyTextBeforeMaplink">" och på kartan är jag här: "</string>
+    <string name="toastMessageSettings">Glöm inte fylla i inställningar!!</string>
 </resources>

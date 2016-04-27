@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
 
         if (pref.getString("sendTo", "").equals("")) {
             Context context = getApplicationContext();
-            CharSequence text = "Glöm inte fylla i inställningar!!";
+            CharSequence text = getString(R.string.toastMessageSettings);
             int duration = Toast.LENGTH_LONG;
 
             Toast toast = Toast.makeText(context, text, duration);
@@ -94,20 +94,19 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     }
 
     public void sendMailHomeButton(View view) {
-        sendMailWithTextAndDisplayMessageMailSent("Hemma!", getString(R.string.bodyHome));
+        sendMailWithTextAndDisplayMessageMailSent(getString(R.string.subjectHome), getString(R.string.bodyHome));
     }
 
     public void sendMailSchoolButton(View view) {
-        sendMailWithTextAndDisplayMessageMailSent("I skolan!", getString(R.string.bodySchool));
+        sendMailWithTextAndDisplayMessageMailSent(getString(R.string.subjectSchool), getString(R.string.bodySchool));
     }
 
     public void sendMailIAMHereButton(View view) {
-        String bodyIAmHere = getString(R.string.bodyIAmHere); //TODO:xml-file
-        sendMailWithTextAndDisplayMessageMailSent("Här är jag!", bodyIAmHere);
+        sendMailWithTextAndDisplayMessageMailSent(getString(R.string.subjectIAmHere), getString(R.string.bodyIAmHere));
     }
 
     public void sendMailWithTextAndDisplayMessageMailSent(String subject, String body) {
-        String bodyWithLinkToMap = body + "<p/>" + " och på kartan är jag: " + "http://www.google.com/maps/place/" +
+        String bodyWithLinkToMap = body + "<p/>" + getString(R.string.bodyTextBeforeMaplink) + "http://www.google.com/maps/place/" +
                 mLastLocation.getLatitude() +"," + mLastLocation.getLongitude();
         mailer.sendMail(subject, bodyWithLinkToMap);
         startDisplayMessageMailSent();

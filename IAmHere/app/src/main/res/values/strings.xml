@@ -13,4 +13,9 @@
     <string name="bodyHome">Hi! I am now at Home!</string>
     <string name="bodySchool">Hi! I am now in School!</string>
     <string name="bodyIAmHere">Hi! Iam now Here!</string>
+    <string name="subjectHome">At home!</string>
+    <string name="subjectSchool">In School!</string>
+    <string name="subjectIAmHere">I Am Here!</string>
+    <string name="bodyTextBeforeMaplink">" and on the map I am here: "</string>
+    <string name="toastMessageSettings">Don´t forget to fill in settings!!</string>
 </resources>
