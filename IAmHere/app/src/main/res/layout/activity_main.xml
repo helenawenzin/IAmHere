@@ -11,6 +11,14 @@
     android:background="@drawable/backrepeat"
     tools:context="com.wenzin.helena.iamhere.MainActivity">
 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/map_icon"
+        android:layout_below="@+id/checkInTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +36,6 @@
         android:layout_height="wrap_content"
         android:text="Hemma"
         android:id="@+id/homeButton"
-        android:layout_marginTop="46dp"
 
         android:onClick="sendMailHomeButton"
         android:textColor="#FFFFFF"
@@ -39,18 +46,15 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:layout_below="@+id/checkInTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/schoolButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skolan"
         android:id="@+id/schoolButton"
-        android:layout_marginTop="49dp"
-        android:layout_below="@+id/homeButton"
-        android:layout_alignLeft="@+id/homeButton"
-        android:layout_alignStart="@+id/homeButton"
 
         android:onClick="sendMailSchoolButton"
         android:textColor="#FFFFFF"
@@ -60,14 +64,16 @@
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
-        android:shadowRadius="5"/>
+        android:shadowRadius="5"
+        android:layout_above="@+id/IAmHerebutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jag är här"
         android:id="@+id/IAmHerebutton"
-        android:layout_marginTop="52dp"
         android:onClick="sendMailIAMHereButton"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
@@ -76,8 +82,8 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:layout_below="@+id/schoolButton"
-        android:layout_alignLeft="@+id/schoolButton"
-        android:layout_alignStart="@+id/schoolButton" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
 
 </RelativeLayout>
