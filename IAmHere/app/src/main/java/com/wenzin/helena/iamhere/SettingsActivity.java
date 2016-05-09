@@ -37,6 +37,10 @@ public class SettingsActivity extends AppCompatActivity {
         editor.putString("sendFrom", textMailFrom.getText().toString());
         editor.apply();
 
+        startDisplayMessageActivity();
+    }
+
+    private void startDisplayMessageActivity() {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         String message = getString(R.string.settingsSaveMessage);
         intent.putExtra(EXTRA_MESSAGE, message);

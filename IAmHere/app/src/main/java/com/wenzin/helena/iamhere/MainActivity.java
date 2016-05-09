@@ -39,6 +39,20 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
         super.onCreate(savedInstanceState);
         createGoogleApiClient();
         setContentView(R.layout.activity_main);
+        getPreferencesAndRemindOfSettingsIfEmpty();
+    }
+
+    private void createGoogleApiClient() {
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(API)
+                    .build();
+        }
+    }
+
+    private void getPreferencesAndRemindOfSettingsIfEmpty() {
         pref = getApplicationContext().getSharedPreferences(SettingsActivity.MY_PREFS_NAME, MODE_PRIVATE);
         mailer = new Mailer(pref);
 
@@ -62,16 +76,6 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     protected void onStop() {
         mGoogleApiClient.disconnect();
         super.onStop();
-    }
-
-    private void createGoogleApiClient() {
-        if (mGoogleApiClient == null) {
-            mGoogleApiClient = new GoogleApiClient.Builder(this)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
-                    .addApi(API)
-                    .build();
-        }
     }
 
     @Override
