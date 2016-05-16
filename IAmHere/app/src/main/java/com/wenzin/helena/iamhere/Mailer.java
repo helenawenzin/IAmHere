@@ -7,9 +7,7 @@ import com.sendgrid.*;
 import java.util.Hashtable;
 import java.util.concurrent.ExecutionException;
 
-/**
- * Created by Helena on 2016-03-18.
- */
+//This class handles sending the email to the parent from SendGrid
 public class Mailer {
 
     private SharedPreferences pref;
@@ -18,6 +16,7 @@ public class Mailer {
         this.pref = pref;
     }
 
+    //Prepare the email for sending
     public void sendMail(String subject, String body) {
         String result = "";
         Hashtable<String,String> params = new Hashtable<String,String>();
@@ -34,14 +33,14 @@ public class Mailer {
             // TODO Implement exception handling
             e.printStackTrace();
         }
-        System.out.println(result);
     }
 
+    //Send the email with SendGrid
     private class SendEmailWithSendGrid extends AsyncTask<Hashtable<String,String>, Void, String> {
 
         @Override
         protected String doInBackground(Hashtable<String,String>... params) {
-            SendGrid sendgrid = new SendGrid("");
+            SendGrid sendgrid = new SendGrid("SendGrid API key");
 
             SendGrid.Email email = new SendGrid.Email();
 
@@ -56,7 +55,6 @@ public class Mailer {
             } catch (SendGridException e) {
                 e.printStackTrace();
             }
-            System.out.println("Status=" + response.getStatus() + " Message: " + response.getMessage());
             return response.toString();
         }
     }
