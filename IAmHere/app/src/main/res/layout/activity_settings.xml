@@ -54,6 +54,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#333333"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Mail skickas till:"
         android:id="@+id/mailToText"
@@ -65,6 +66,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#333333"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Mail skickas från:"
         android:id="@+id/mailFromText"

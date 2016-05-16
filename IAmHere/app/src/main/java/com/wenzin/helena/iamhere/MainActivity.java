@@ -27,7 +27,7 @@ import static com.google.android.gms.location.LocationServices.FusedLocationApi;
 public class MainActivity extends AppCompatActivity implements ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     public final static String EXTRA_MESSAGE = "com.wenzin.helena.iamhere.MESSAGE";
-    private static final int MY_PERMISSIONS_REQUEST_TO_ACCESS_LOCATION = 222;
+    private static final int MY_PERMISSIONS_REQUEST_TO_ACCESS_LOCATION = 222; //can be any number
 
     private SharedPreferences pref;
     private Mailer mailer;
@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
         }
     }
 
+    //A help Toast for the user to remember to fill in settings
+    //Shows every time MainActivity is loaded
     private void getPreferencesAndRemindOfSettingsIfEmpty() {
         pref = getApplicationContext().getSharedPreferences(SettingsActivity.MY_PREFS_NAME, MODE_PRIVATE);
         mailer = new Mailer(pref);
@@ -116,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
         startDisplayMessageMailSent();
     }
 
+    //Displays message sent when any of the buttons are clicked
     private void startDisplayMessageMailSent() {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         intent.putExtra(EXTRA_MESSAGE, getString(R.string.messageMailSent));
@@ -126,7 +129,6 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     public void onConnected(@Nullable Bundle bundle) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            System.out.println("Permissions saknas");
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -141,24 +143,23 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
         }
         mLastLocation = FusedLocationApi.getLastLocation(mGoogleApiClient);
 
-        if (mLastLocation != null) {
-            System.out.println("LATITUD ÄR: " + String.valueOf(mLastLocation.getLatitude()));
-            System.out.println("LONGITUD ÄR: " + String.valueOf(mLastLocation.getLongitude()));
-        }
+        //if (mLastLocation != null) {
+        //    System.out.println("LATITUD ÄR: " + String.valueOf(mLastLocation.getLatitude()));
+        //    System.out.println("LONGITUD ÄR: " + String.valueOf(mLastLocation.getLongitude()));
+        //}
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        System.out.println("Yay, got a permissions callback!");
 
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_TO_ACCESS_LOCATION: {
                 //If request denied, array is empty
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //Hooray! We got permission! Call the location service!
+                    //We got permission! Call the location service!
                     onConnected(null);
                 } else {
-                    //Cry cry, no permissions, dont ask again!
+                    //no permissions received
                     //TODO: Make sure we dont ask permissions again
                 }
                 return;
