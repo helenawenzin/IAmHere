@@ -33,6 +33,7 @@ public class SettingsActivity extends AppCompatActivity {
         EditText textMailTo = (EditText) findViewById(R.id.save_Email_Send_To);
         EditText textMailFrom = (EditText) findViewById(R.id.save_Email_Send_From);
 
+        //Save the emails provided by the user in shared preferences
         editor.putString("sendTo", textMailTo.getText().toString());
         editor.putString("sendFrom", textMailFrom.getText().toString());
         editor.apply();
@@ -40,6 +41,7 @@ public class SettingsActivity extends AppCompatActivity {
         startDisplayMessageActivity();
     }
 
+    //Displays settings saved when the save button is clicked
     private void startDisplayMessageActivity() {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         String message = getString(R.string.settingsSaveMessage);
