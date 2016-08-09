@@ -11,13 +11,15 @@ import java.util.concurrent.ExecutionException;
 public class Mailer {
 
     private SharedPreferences pref;
+    private String apiKey;
 
     public Mailer(SharedPreferences pref) {
         this.pref = pref;
     }
 
     //Prepare the email for sending
-    public void sendMail(String subject, String body) {
+    public void sendMail(String subject, String body, String apiKey) {
+        this.apiKey = apiKey;
         String result = "";
         Hashtable<String,String> params = new Hashtable<String,String>();
         params.put("subject", subject);
@@ -40,7 +42,7 @@ public class Mailer {
 
         @Override
         protected String doInBackground(Hashtable<String,String>... params) {
-            SendGrid sendgrid = new SendGrid("SendGrid API key");
+            SendGrid sendgrid = new SendGrid(apiKey);
 
             SendGrid.Email email = new SendGrid.Email();
 

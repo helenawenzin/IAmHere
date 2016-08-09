@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     private Mailer mailer;
     private GoogleApiClient mGoogleApiClient;
     private Location mLastLocation;
+    private String apiKey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         createGoogleApiClient();
         setContentView(R.layout.activity_main);
+        apiKey = HelperForProperties.getConfigValue(this, "api_key_sendgrid");
         getPreferencesAndRemindOfSettingsIfEmpty();
     }
 
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements ConnectionCallbac
     public void sendMailWithTextAndDisplayMessageMailSent(String subject, String body) {
         String bodyWithLinkToMap = body + "<p/>" + getString(R.string.bodyTextBeforeMaplink) + "http://www.google.com/maps/place/" +
                 mLastLocation.getLatitude() +"," + mLastLocation.getLongitude();
-        mailer.sendMail(subject, bodyWithLinkToMap);
+        mailer.sendMail(subject, bodyWithLinkToMap, apiKey);
         startDisplayMessageMailSent();
     }
 
